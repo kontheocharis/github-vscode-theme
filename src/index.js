@@ -19,22 +19,22 @@ const lightColorblindTheme = getTheme({
 
 const darkDefaultTheme = getTheme({
   theme: "dark",
-  name: "GitHub Dark Default",
+  name: "GitHub Dark Default (Grayscale)",
 });
 
 const darkHighContrastTheme = getTheme({
   theme: "dark_high_contrast",
-  name: "GitHub Dark High Contrast"
+  name: "GitHub Dark High Contrast (Grayscale)"
 })
 
 const darkColorblindTheme = getTheme({
   theme: "dark_colorblind",
-  name: "GitHub Dark Colorblind"
+  name: "GitHub Dark Colorblind (Grayscale)"
 })
 
 const darkDimmedTheme = getTheme({
   theme: "dark_dimmed",
-  name: "GitHub Dark Dimmed"
+  name: "GitHub Dark Dimmed (Grayscale)"
 })
 
 // Classic
@@ -46,7 +46,7 @@ const lightTheme = getClassicTheme({
 
 const darkTheme = getClassicTheme({
   style: "dark",
-  name: "GitHub Dark",
+  name: "GitHub Dark (Grayscale)",
 });
 
 // Write themes

@@ -11,11 +11,53 @@ const { getColors } = require("./colors");
 // 3. Per theme. Useful when a certain theme needs an exception
 //    e.g. "textLink.foreground": themes({ light: scale.blue[5], light_high_contrast: scale.blue[5], light_colorblind: scale.blue[5], dark: scale.blue[2], dark_high_contrast: scale.blue[3], dark_colorblind: scale.blue[2], dark_dimmed: scale.blue[3] }),
 
+// Convert blue-tinted background colors to true grayscale
+function convertBackgroundToGrayscale(colorObj) {
+  const backgroundColors = [
+    'canvas.default',
+    'canvas.overlay', 
+    'canvas.inset',
+    'canvas.subtle'
+  ];
+  
+  backgroundColors.forEach(colorPath => {
+    const pathParts = colorPath.split('.');
+    let current = colorObj;
+    
+    // Navigate to the color property
+    for (let i = 0; i < pathParts.length - 1; i++) {
+      if (current[pathParts[i]]) {
+        current = current[pathParts[i]];
+      }
+    }
+    
+    const finalKey = pathParts[pathParts.length - 1];
+    if (current[finalKey]) {
+      const originalColor = current[finalKey];
+      if (chroma.valid(originalColor)) {
+        const rgb = chroma(originalColor).rgb();
+        // Take the minimum RGB value and use it for all channels
+        const minChannel = Math.min(rgb[0], rgb[1], rgb[2]);
+        const grayscaleColor = chroma.rgb(minChannel, minChannel, minChannel).hex();
+        current[finalKey] = grayscaleColor;
+      }
+    }
+  });
+  
+  return colorObj;
+}
+
 function getTheme({ theme, name }) {
 
   const themes = (options) => options[theme]; // Usage: themes({ light: "lightblue", light_high_contrast: "lightblue", light_colorblind: "lightblue", dark: "darkblue", dark_high_contrast: "darkblue", dark_colorblind: "darkblue", dark_dimmed: "royalblue" })
   const rawColors = getColors(theme)
-  const color = changeColorToHexAlphas(rawColors)
+  let color = changeColorToHexAlphas(rawColors)
+  
+  // Convert background colors to true grayscale for dark themes
+  if (theme.startsWith('dark')) {
+    color = convertBackgroundToGrayscale(color);
+  }
+  
   const scale = color.scale; // Usage: scale.blue[6]
 
   const onlyDark = (color) => {
