@@ -6,8 +6,8 @@
   "theme": {
     "colors": {
       "toolbar": [13, 13, 13],
-      "tab_text": [230, 237, 243],
-      "tab_background_text": [125, 133, 144],
+      "tab_text": [200, 208, 210],
+      "tab_background_text": [149, 153, 160],
       "bookmark_text": [125, 133, 144],
       "ntp_background": [1, 1, 1],
       "ntp_text": [230, 237, 243],
@@ -18,7 +18,7 @@
       "background_tab": [35, 35, 35],
       "background_tab_inactive": [25, 25, 25],
       "omnibox_background": [16, 16, 16],
-      "omnibox_text": [125, 133, 144]
+      "omnibox_text": [200, 208, 210]
     }
   }
 }
