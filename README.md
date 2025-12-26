@@ -1,8 +1,8 @@
-# GitHub's VS Code themes (Grayscale)
+# GitHub's VS Code themes but in grayscale
 
 > **Note**: This fork was made by Claude AI
 
-![GitHub VS Code theme](https://user-images.githubusercontent.com/378023/132220037-3cd3e777-55a6-445f-9a2e-da6020ebd78d.png)
+![GitHub VS Code theme (Grayscale)](./sample.png)
 
 A fork of GitHub's VS Code theme with grayscale backgrounds instead of blue-tinted ones for dark themes.
 
@@ -18,8 +18,3 @@ A fork of GitHub's VS Code theme with grayscale backgrounds instead of blue-tint
     - `GitHub Dark High Contrast (Grayscale)`
     - `GitHub Dark Colorblind (Grayscale)`
     - `GitHub Dark Dimmed (Grayscale)`
-
-Additionally, there are also two older themes:
-
-- `GitHub Light` (legacy)
-- `GitHub Dark (Grayscale)` (legacy)
