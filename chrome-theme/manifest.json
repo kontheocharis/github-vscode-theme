@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Dark Default",
+  "version": "1.0.0",
+  "description": "Chrome theme based on GitHub Dark Default colors",
+  "theme": {
+    "colors": {
+      "toolbar": [13, 13, 13],
+      "tab_text": [230, 237, 243],
+      "tab_background_text": [125, 133, 144],
+      "bookmark_text": [125, 133, 144],
+      "ntp_background": [1, 1, 1],
+      "ntp_text": [230, 237, 243],
+      "button_background": [35, 134, 54],
+      "frame": [1, 1, 1],
+      "frame_inactive": [1, 1, 1],
+      "tab_background_text_inactive": [125, 133, 144],
+      "background_tab": [35, 35, 35],
+      "background_tab_inactive": [25, 25, 25],
+      "omnibox_background": [16, 16, 16],
+      "omnibox_text": [125, 133, 144]
+    }
+  }
+}

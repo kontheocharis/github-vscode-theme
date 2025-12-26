@@ -2,7 +2,7 @@
   "name": "github-vscode-theme-grayscale",
   "displayName": "GitHub Theme (Grayscale)",
   "description": "GitHub theme for VS Code with true grayscale backgrounds instead of blue-tinted ones",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "kontheocharis",
   "license": "MIT",
   "icon": "icon.png",
